@@ -35,10 +35,10 @@ namespace FfntTool.Ffnt
         public byte Layer { get; set; }
 
         [XmlAttribute]
-        public byte HorizontalSpace { get; set; }
+        public sbyte HorizontalSpace { get; set; }
 
         [XmlAttribute]
-        public byte HorizontalShift { get; set; }
+        public sbyte HorizontalShift { get; set; }
 
         [XmlAttribute]
         public sbyte VerticalShift { get; set; }
@@ -68,8 +68,8 @@ namespace FfntTool.Ffnt
             Width = reader.ReadByte();
             Height = reader.ReadByte();
             Layer = reader.ReadByte();
-            HorizontalSpace = reader.ReadByte();
-            HorizontalShift = reader.ReadByte();
+            HorizontalSpace = reader.ReadSByte();
+            HorizontalShift = reader.ReadSByte();
             VerticalShift = reader.ReadSByte();
             Unknown1 = reader.ReadInt16();
             Unknown2 = reader.ReadInt32();
