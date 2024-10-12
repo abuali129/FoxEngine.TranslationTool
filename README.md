@@ -1,3 +1,17 @@
+v0.2.6.ffnt.mod
+
+FfntTool Modded
+
+Used v0.2.6 as a base to allow negative values of HorizontalSpace & HorizontalShift read and write for .ffnt
++ Unknown2 in GlyphMap.cs is refer to CharacterSpacing, play with this value to find your sweet spot of Character Spacing.
+
+should be work on both, GZ & TPP.
+
+SubpTool & LangTool untouched
+
+
+Original Readme below
+-----------
 # FoxEngine.TranslationTool
 A bundle of tools related to text editing Fox Engine / MGSV Ground Zeroes files.
 
