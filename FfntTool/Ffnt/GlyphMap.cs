@@ -20,7 +20,7 @@ namespace FfntTool.Ffnt
         public List<Glyph> Glyphs { get; set; }
 
         public int Unknown1 { get; set; }
-        public short Unknown2 { get; set; }
+        public short CharacterSpacing { get; set; }
         public int Unknown3 { get; set; }
 
         public static GlyphMap ReadGlyphMap(Stream inputStream)
@@ -34,7 +34,7 @@ namespace FfntTool.Ffnt
         {
             BinaryReader reader = new BinaryReader(inputStream, Encoding.Default, true);
             Unknown1 = reader.ReadInt32();
-            Unknown2 = reader.ReadInt16();
+            CharacterSpacing = reader.ReadInt16();
             short glyphCount = reader.ReadInt16();
             int size = reader.ReadInt32();
             Unknown3 = reader.ReadInt32();
@@ -48,7 +48,7 @@ namespace FfntTool.Ffnt
         {
             BinaryWriter writer = new BinaryWriter(outputStream, Encoding.Default, true);
             writer.Write(Unknown1);
-            writer.Write(Unknown2);
+            writer.Write(CharacterSpacing);
             writer.Write((short) Glyphs.Count);
             writer.Write(GetAlignedSize(0));
             writer.Write(Unknown3);
